@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    
+    <!-- ✅ Viewport Meta for Fullscreen + iPhone Safe Area -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+
+    <!-- ✅ Description & Theme Settings -->
+    <meta name="description" content="Koole - Best Travel Experience" />
+    <meta name="theme-color" content="#f3f4f6"> <!-- ✅ Transparent does not work properly -->
+
+    <!-- ✅ Ensure PWA Fullscreen Support on iPhones -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default"> <!-- ✅ Matches background -->
+
+    <!-- ✅ Favicon & Apple Icons -->
+    <link rel="icon" type="image/png" href="./src/assets/koole.svg" />
+    <link rel="apple-touch-icon" href="./src/assets/koole.svg" />
+
+    <!-- ✅ Web App Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- ✅ Title -->
+    <title>کوله - سفرهای جذاب</title>
+  </head>
+  <body>
+    <noscript>برای استفاده از این وب‌سایت، جاوااسکریپت را فعال کنید.</noscript>
+    <div id="root"></div>
+    <script type="module" src="./src/main.jsx"></script>
+  </body>
+</html>

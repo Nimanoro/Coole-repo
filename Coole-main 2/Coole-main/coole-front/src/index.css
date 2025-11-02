@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'YekanBakh';
+  src: url('/YekanBakh.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: 'YekanBakh', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #feffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ✅ Fix mobile viewport & allow scrolling */
+html, body, #root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 🔥 Ensure content starts from the top */
+  align-items: center;
+  overflow-x: hidden; /* ✅ Allows vertical scrolling but prevents horizontal scrolling */
+  overflow-y: auto; /* ✅ Allows scrolling */
+  background-color: #f3f4f6;
+  -webkit-overflow-scrolling: touch; /* ✅ Improves scrolling performance */
+}
+
+/* ✅ Safe area insets to prevent UI clipping */
+html, body {
+  min-height: 100vh;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* ✅ Ensures the main app container fills the screen correctly */
+.app-container {
+  width: 100vw;
+  max-width: 430px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* ✅ Start content from top */
+  background-color: #f3f4f6;
+}
+
+/* ✅ Fix unwanted margin issues inside components */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ✅ Limit max width on larger screens */
+@media (min-width: 600px) { 
+  #root {
+    max-width: 430px;
+    height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
