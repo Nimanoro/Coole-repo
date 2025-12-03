@@ -72,7 +72,9 @@ app.use("/api", editTrip);
 const password = encodeURIComponent(process.env.MONGO_PASSWORD);
 
 // Construct the MongoDB URI
-const uri = `mongodb+srv://cooletravelapp:${password}@cluster0.y5vja.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+const uri = `mongodb+srv://nimanourozy_db_user:${password}@cluster0.x5wslrq.mongodb.net/?appName=Cluster0
+
+`;
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB Connected"))
